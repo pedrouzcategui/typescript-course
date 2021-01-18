@@ -379,6 +379,39 @@ By definiton, and Overload is a function that is declared multiple Times, but de
 
 When invoking the function, the output will depend of the type of the parameters passed.
 
+### Literals
+
+In typescript exists 3 native types or literal types, those are string, boolean or number.
+When we are using let, we are telling typescript that this variable will change its content,
+Using const, we are saying that this variable will never change its content.
+
+This means that:
+
+```ts
+const helloWorld = "helloWorld"; // TypeScript sets the type to be "Hello World", not string.
+let hiWorld = "Hi World"; // On the other hand a let can change, so declares it a string.
+```
+
+Narrowing is the action to delimite the infinite number of potential cases to a smaller, finite number of potencial case values.
+
+```ts
+type Easing = "ease-in" | "ease-out" | "ease-in-out";
+class UIElement {
+    animate(dx: number, dy: number, easing: Easing) {
+        if (easing === "ease-in") {
+        // ...
+        } else if (easing === "ease-out") {
+        } else if (easing === "ease-in-out") {
+        } else {
+        // It's possible that someone could reach this
+        // by ignoring your types though.
+        }
+    }
+}
+```
+
+
+
 
 
 
