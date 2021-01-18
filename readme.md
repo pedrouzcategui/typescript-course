@@ -425,8 +425,51 @@ If we say that a function return `pet | fish`, we might notice that that functio
 
 Combine multiples types into one. Add together multiples type into a single one that has all the features you need.
 
+## Classes and features in typescript
 
+### Static Members
 
+An Static Member of a class allows us to create properties that are only accesible and visible on the class itself rather than on the instances.
+```ts
+class Grid {
+    static origin = {x:0, y:0};
+
+    calculateDistanceFromOrigin(point: {x:number,y:number}){
+        let xDist = point.x - Grid.origin.x;
+        let yDist = point.y - Grid.origin.y;
+        return Math.sqrt(xDist * xDist + yDist * yDist) / this.scale;
+    }
+
+    constructor(public scale: number){}
+}
+
+let grid = new Grid(5.0); // 5x Scale
+console.log(grid.calculateDistanceFromOrigin({x:10,y:10}));
+```
+
+In this case, we are accessing Grid.origin, saying that the class Grid has an origin member.
+We only can access Grid.origin in the class itself, not in the instantiation.
+
+### Abstract Classes
+
+Base classes from which other classes may be derived, but they cannot be instantiated directly.
+
+How constructors work on abstract classes?
+How properties work on abstract classes?
+
+### Generics 
+
+Generics could help us to capture specific types of data to a function and using it to define their params or return types based on the data captured by the generic
+
+```ts
+function identity<T>(arg: T): T{
+    return arg;
+}
+```
+
+### Generic Interfaces
+
+### Generic Classes
 
 
 
