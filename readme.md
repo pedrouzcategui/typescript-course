@@ -410,7 +410,20 @@ class UIElement {
 }
 ```
 
+## Union and intersection types
 
+We can compose types, merging them.
+
+### Union Types
+
+Unions are described using `|`
+
+If we say that a function return `pet | fish`, we might notice that that function might return a pet or a fish.
+
+
+### Intersection Types
+
+Combine multiples types into one. Add together multiples type into a single one that has all the features you need.
 
 
 
