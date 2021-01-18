@@ -8,8 +8,8 @@
     "tsc": "tsc --watch"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Pedro Uzcategui",
+  "license": "MIT",
   "dependencies": {
     "typescript": "^4.1.3"
   }

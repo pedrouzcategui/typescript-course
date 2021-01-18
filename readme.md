@@ -119,43 +119,8 @@ function printLabel(labeledObj: LabeledValue){
 let myObj = {size:10, label:"Size 10 Object"};
 printLabel(myObj);
 ```
-
 Despite our object have more another property, the thing that typescript does is find if the object passed to the interface have
 everything that the interface requires, if that is, then is allowed.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ## Unions
 
